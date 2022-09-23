@@ -1,5 +1,6 @@
 <?php
 
+require_once __DIR__ . '/../traits/Address.php';
 class User {
     public $name;
     public $lastname;
@@ -7,4 +8,5 @@ class User {
     public $email;
     public $phone;
 
+    use Address;
 }

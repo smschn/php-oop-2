@@ -6,5 +6,5 @@ class Customer extends User {
 
 }
 
-$test = new Customer();
-var_dump($test);
+$test1 = new Customer();
+var_dump($test1);
