@@ -11,9 +11,7 @@ class Customer extends User {
 }
 
 $customer_1 = new Customer('Marco', 'Rossi', 'marco@rossi.com');
-var_dump($customer_1);
 
 $customer_2 = new Customer('Marco', 'Bianchi', 'marco@bianchi.com', 70, 3319080700);
-var_dump($customer_2);
 
 ?>

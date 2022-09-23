@@ -10,7 +10,6 @@ class PropertyForSale extends Property {
 
 }
 
-$property_3_sale = new PropertyForSale('Attico #789', 1000000);
-var_dump($property_3_sale);
+$property_2_sale = new PropertyForSale('Attico #789', 1000000);
 
 ?>

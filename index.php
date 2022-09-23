@@ -21,51 +21,65 @@ require_once __DIR__ . '/class/Property/PropertyForSale.php';
 
     <!-- Customers -->
     <h1>Customers:</h1>
-    <ul>
+    <ol>
         <li>
-            <?php echo $customer_1->getUserNameLastname(); ?>
+            <?php
+                echo $customer_1->getUserFullname() . '<br>';
+
+                // test EXCEPTION: setDiscount NON funziona => EXCEPTION mostra un messaggio d'errore.
+                try {
+                    $customer_1->setDiscount('provare la exception');
+                } catch (Exception $e) {
+                    echo $e->getMessage();
+                }
+            ?>
         </li>
         <br>
         <li>
-            <?php echo $customer_2->getUserNameLastname(); ?>
-        </li>
-        <li>
             <?php
-            $customer_2->setDiscount(70);
-            echo 'Sconto customer_2: ' . $customer_2->getDiscount() . ' %.';
+                echo $customer_2->getUserFullname() . '<br>';
+
+                // test EXCEPTION: setDiscount() funziona.
+                try {
+                    $customer_2->setDiscount(70);
+                } catch (Exception $e) {
+                    echo $e->getMessage();
+                };
+
+                echo 'Sconto di ' . $customer_2->name . ' ' . $customer_2->lastname . ': ' . $customer_2->getDiscount() . ' %.';
             ?>
         </li>
-    </ul>
+    </ol>
 
     <!-- EstateAgents -->
     <h1>EstateAgents:</h1>
-    <ul>
-        <li>
-            <?php echo $employee_1->getUserNameLastname(); ?>
-        </li>
+    <ol>
         <li>
             <?php
-            $employee_1->setDiscount(60);
-            echo 'Sconto ' . $employee_1->name . ' ' . $employee_1->lastname . ': '. $employee_1->getDiscount() . ' %.'; ?>
-        </li>
-        <li>
-            <?php
-            $employee_1->setAddress('Bellagio', 22021, 'Como');
-            echo $employee_1->getAddress();
+                echo $employee_1->getUserFullname() . '<br>';
+                
+                // test EXCEPTION: setDiscount() funziona.
+                try {
+                    $employee_1->setDiscount(70);
+                } catch (Exception $e) {
+                    echo $e->getMessage();
+                };
+
+                echo 'Sconto di ' . $employee_1->name . ' ' . $employee_1->lastname . ': '. $employee_1->getDiscount() . ' %. <br>';
+
+                $employee_1->setAddress('Bellagio', 22021, 'Como'); // questi 3 attributi sono PROTECTED: si accede ad essi solo con una set() e una get().
+                echo $employee_1->getAddress(); // leggere riga sopra.
             ?>
         </li>
-    </ul>
+    </ol>
 
     <!-- Properties -->
     <h1>Properties:</h1>
-    <ul>
+    <ol>
         <li>
-            <?php echo $property_1->name ?>
+            <?php echo 'Nome immobile: ' . $property_1_rent->name . ' --- Affitto mensile: ' . $property_1_rent->getRentalPrice() ?>
         </li>
-        <li>
-            <?php echo 'Nome immobile: ' . $property_2_rent->name . ' --- Affitto mensile: ' . $property_2_rent->getRentalPrice() ?>
-        </li>
-    </ul>
+    </ol>
 
 </body>
 </html>

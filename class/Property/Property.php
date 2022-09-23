@@ -2,6 +2,8 @@
 class Property {
 
     public $name;
+    public $property_type;
+    public $size;
 
     use Address;
 
@@ -10,8 +12,5 @@ class Property {
     }
 
 }
-
-$property_1 = new Property('Villa Balbianello');
-var_dump($property_1);
 
 ?>

@@ -14,7 +14,7 @@ trait Address {
     }
 
     public function getAddress() {
-        return 'Residenza: ' . $this->city . ' --- CAP: ' . $this->cap . ' --- Provincia: ' . $this->province;
+        return 'Residenza: ' . $this->city . ' <br> CAP: ' . $this->cap . ' <br> Provincia: ' . $this->province;
     }
 
 }

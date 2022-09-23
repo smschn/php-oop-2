@@ -9,7 +9,7 @@ class User {
     public $age;
     protected $discount;
 
-    use Address;
+    use Address; // importo il TRAIT 'Address' (essendo in un altro file devo importarne il codice tramite REQUIRE).
 
     public function __construct($nameP, $lastnameP, $emailP, $ageP = null) {
         $this->name = $nameP;
@@ -18,12 +18,15 @@ class User {
         $this->age = $ageP;
     }
 
-    public function getUserNameLastname() {
-        return 'Nome: ' . $this->name . ' --- Cognome: ' . $this->lastname;
+    public function getUserFullname() {
+        return 'Nome: ' . $this->name . ' <br> Cognome: ' . $this->lastname;
     }
 
     public function setDiscount($ageP) {
-        if ($ageP >= 60 && is_int($ageP)) {
+        if (!is_int($ageP)) {
+            throw new Exception('Errore inserimento età: inserire un numero intero per calcolare lo sconto.');
+            $this->discount = null;
+        } else if ($ageP >= 60) {
             $this->discount = 10;
         }
     }

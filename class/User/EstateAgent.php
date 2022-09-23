@@ -1,5 +1,6 @@
 <?php
 class EstateAgent extends User {
+
     public $employee_id;
     public $employee_wage;
     public $employee_level;
@@ -10,7 +11,10 @@ class EstateAgent extends User {
     }
 
     public function setDiscount($ageP) {
-        if ($ageP >= 60 && is_int($ageP)) {
+        if (!is_int($ageP)) {
+            throw new Exception('Errore inserimento età: inserire un numero intero per calcolare lo sconto.');
+            $this->discount = null;
+        } else if ($ageP >= 60) {
             $this->discount = 35;
         }
     }
@@ -18,6 +22,6 @@ class EstateAgent extends User {
 }
 
 $employee_1 = new EstateAgent('Veronica', 'Rossi', 'veronica@rossi.com', 60, 1234);
-var_dump($employee_1);
+$employee_1->setDiscount(60); // 'discount' è PROTECTED: si accede ad esso solo tramite una set() o una get().
 
 ?>
