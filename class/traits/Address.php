@@ -1,5 +1,4 @@
 <?php
-
 trait Address {
 
     public $street;
@@ -17,5 +16,7 @@ trait Address {
     public function getAddress() {
         return 'Residenza: ' . $this->city . ' --- CAP: ' . $this->cap . ' --- Provincia: ' . $this->province;
     }
-    
+
 }
+
+?>

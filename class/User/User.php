@@ -32,3 +32,5 @@ class User {
         return $this->discount;
     }
 }
+
+?>

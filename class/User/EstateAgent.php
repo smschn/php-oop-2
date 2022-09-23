@@ -1,7 +1,4 @@
 <?php
-
-require_once __DIR__ . '/User.php';
-
 class EstateAgent extends User {
     public $employee_id;
     public $employee_wage;
@@ -22,3 +19,5 @@ class EstateAgent extends User {
 
 $employee_1 = new EstateAgent('Veronica', 'Rossi', 'veronica@rossi.com', 60, 1234);
 var_dump($employee_1);
+
+?>

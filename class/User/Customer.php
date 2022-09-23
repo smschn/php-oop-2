@@ -1,7 +1,4 @@
 <?php
-
-require_once __DIR__ . '/User.php';
-
 class Customer extends User {
 
     public $phone;
@@ -18,3 +15,5 @@ var_dump($customer_1);
 
 $customer_2 = new Customer('Marco', 'Bianchi', 'marco@bianchi.com', 70, 3319080700);
 var_dump($customer_2);
+
+?>

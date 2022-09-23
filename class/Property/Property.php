@@ -1,7 +1,4 @@
 <?php
-
-require_once __DIR__ . '/../traits/Address.php';
-
 class Property {
 
     public $name;
@@ -16,3 +13,5 @@ class Property {
 
 $property_1 = new Property('Villa Balbianello');
 var_dump($property_1);
+
+?>

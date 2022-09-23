@@ -1,9 +1,11 @@
 <?php
 
+require_once __DIR__ . '/class/User/User.php';
 require_once __DIR__ . '/class/User/Customer.php';
 require_once __DIR__ . '/class/User/EstateAgent.php';
 require_once __DIR__ . '/class/Property/Property.php';
 require_once __DIR__ . '/class/Property/PropertyForRent.php';
+require_once __DIR__ . '/class/Property/PropertyForSale.php';
 
 ?>
 
