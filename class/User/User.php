@@ -19,7 +19,7 @@ class User {
     }
 
     public function getUserNameLastname() {
-        return 'Nome: ' . $this->name . ' - Cognome: ' . $this->lastname;
+        return 'Nome: ' . $this->name . ' --- Cognome: ' . $this->lastname;
     }
 
     public function setDiscount($ageP) {

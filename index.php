@@ -32,7 +32,7 @@ require_once __DIR__ . '/class/Property/Property.php';
             ?>
         </li>
     </ul>
-    <h1>EstateAgent:</h1>
+    <h1>EstateAgents:</h1>
     <ul>
         <li>
             <?php echo $employee_1->getUserNameLastname(); ?>
@@ -41,6 +41,12 @@ require_once __DIR__ . '/class/Property/Property.php';
             <?php
             $employee_1->setDiscount(60);
             echo 'Sconto employee_1: ' . $employee_1->getDiscount() . ' %.'; ?>
+        </li>
+        <li>
+            <?php
+            $employee_1->setAddress('Bellagio', 22021, 'Como');
+            echo $employee_1->getAddress();
+            ?>
         </li>
     </ul>
 
