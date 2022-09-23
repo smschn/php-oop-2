@@ -3,6 +3,7 @@
 require_once __DIR__ . '/User.php';
 
 class Customer extends User {
+
     public $phone;
 
     public function __construct($nameP, $lastnameP, $emailP, $ageP = null, $phoneP = null) {
@@ -13,6 +14,7 @@ class Customer extends User {
     public function getCustomerNameLastname() {
         return 'Nome: ' . $this->name . ' - Cognome: ' . $this->lastname;
     }
+    
 }
 
 $customer_1 = new Customer('Marco', 'Rossi', 'marco@rossi.com');
