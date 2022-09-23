@@ -11,10 +11,6 @@ class Customer extends User {
         $this->phone = $phoneP;
     }
 
-    public function getCustomerNameLastname() {
-        return 'Nome: ' . $this->name . ' - Cognome: ' . $this->lastname;
-    }
-    
 }
 
 $customer_1 = new Customer('Marco', 'Rossi', 'marco@rossi.com');

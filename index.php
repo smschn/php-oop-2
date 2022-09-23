@@ -19,11 +19,11 @@ require_once __DIR__ . '/class/Property/Property.php';
     <h1>Customers:</h1>
     <ul>
         <li>
-            <?php echo $customer_1->getCustomerNameLastname(); ?>
+            <?php echo $customer_1->getUserNameLastname(); ?>
         </li>
         <br>
         <li>
-            <?php echo $customer_2->getCustomerNameLastname(); ?>
+            <?php echo $customer_2->getUserNameLastname(); ?>
         </li>
         <li>
             <?php
@@ -35,7 +35,7 @@ require_once __DIR__ . '/class/Property/Property.php';
     <h1>EstateAgent:</h1>
     <ul>
         <li>
-            <?php echo $employee_1->getEmployeeNameLastname(); ?>
+            <?php echo $employee_1->getUserNameLastname(); ?>
         </li>
         <li>
             <?php

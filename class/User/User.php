@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/../traits/Address.php';
 class User {
-    
+
     public $name;
     public $lastname;
     public $email;
@@ -16,6 +16,10 @@ class User {
         $this->lastname = $lastnameP;
         $this->email = $emailP;
         $this->age = $ageP;
+    }
+
+    public function getUserNameLastname() {
+        return 'Nome: ' . $this->name . ' - Cognome: ' . $this->lastname;
     }
 
     public function setDiscount($ageP) {

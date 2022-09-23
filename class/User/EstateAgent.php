@@ -12,10 +12,6 @@ class EstateAgent extends User {
         $this->employee_id = $employee_idP;
     }
 
-    public function getEmployeeNameLastname() {
-        return 'Nome: ' . $this->name . ' - Cognome: ' . $this->lastname;
-    }
-
     public function setDiscount($ageP) {
         if ($ageP >= 60 && is_int($ageP)) {
             $this->discount = 35;
