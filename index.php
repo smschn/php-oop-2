@@ -56,19 +56,20 @@ require_once __DIR__ . '/class/Property/PropertyForSale.php';
     <ol>
         <li>
             <?php
-                echo $employee_1->getUserFullname() . '<br>';
+                echo $estateAgent_1->getUserFullname() . '<br>';
                 
                 // test EXCEPTION: setDiscount() funziona.
                 try {
-                    $employee_1->setDiscount(70);
+                    $estateAgent_1->setDiscount(70);
                 } catch (Exception $e) {
                     echo $e->getMessage();
                 };
 
-                echo 'Sconto di ' . $employee_1->name . ' ' . $employee_1->lastname . ': '. $employee_1->getDiscount() . ' %. <br>';
+                echo 'Sconto di ' . $estateAgent_1->name . ' ' . $estateAgent_1->lastname . ': '. $estateAgent_1->getDiscount() . ' %. <br>';
 
-                $employee_1->setAddress('Bellagio', 22021, 'Como'); // questi 3 attributi sono PROTECTED: si accede ad essi solo con una set() e una get().
-                echo $employee_1->getAddress(); // leggere riga sopra.
+                $estateAgent_1->setAddress('Bellagio', 22021, 'Como'); // questi 3 attributi sono PROTECTED: si accede ad essi solo con una set() e una get().
+                echo $estateAgent_1->getAddress() . '<br>'; // leggere riga sopra.
+                echo $estateAgent_1->getWage(); // leggere riga sopra.
             ?>
         </li>
     </ol>
@@ -77,7 +78,15 @@ require_once __DIR__ . '/class/Property/PropertyForSale.php';
     <h1>Properties:</h1>
     <ol>
         <li>
-            <?php echo 'Nome immobile: ' . $property_1_rent->name . ' --- Affitto mensile: ' . $property_1_rent->getRentalPrice() ?>
+            <?php
+                echo 'Nome immobile: ' . $property_1_rent->name . ' <br> Affitto mensile: ' . $property_1_rent->getRentalPrice();
+            ?>
+        </li>
+        <br>
+        <li>
+            <?php
+                echo $property_2_sale->getPropertyForSaleInfo();
+            ?>
         </li>
     </ol>
 

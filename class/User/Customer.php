@@ -1,4 +1,5 @@
 <?php
+
 class Customer extends User {
 
     public $phone;
@@ -11,6 +12,7 @@ class Customer extends User {
 }
 
 $customer_1 = new Customer('Marco', 'Rossi', 'marco@rossi.com');
+$customer_1->phone = 8887766555; // si può accedere a phone perché è PUBLIC.
 
 $customer_2 = new Customer('Marco', 'Bianchi', 'marco@bianchi.com', 70, 3319080700);
 

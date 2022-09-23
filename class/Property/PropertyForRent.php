@@ -1,4 +1,5 @@
 <?php
+
 class PropertyForRent extends Property {
 
     protected $rental_price;

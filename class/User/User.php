@@ -9,7 +9,7 @@ class User {
     public $age;
     protected $discount;
 
-    use Address; // importo il TRAIT 'Address' (essendo in un altro file devo importarne il codice tramite REQUIRE).
+    use Address; // importo il TRAIT 'Address' (trovandosi in un altro file, bisogna importarne il codice tramite REQUIRE).
 
     public function __construct($nameP, $lastnameP, $emailP, $ageP = null) {
         $this->name = $nameP;
