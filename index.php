@@ -3,6 +3,7 @@
 require_once __DIR__ . '/class/User/Customer.php';
 require_once __DIR__ . '/class/User/EstateAgent.php';
 require_once __DIR__ . '/class/Property/Property.php';
+require_once __DIR__ . '/class/Property/PropertyForRent.php';
 
 ?>
 
@@ -16,6 +17,7 @@ require_once __DIR__ . '/class/Property/Property.php';
 </head>
 <body>
 
+    <!-- Customers -->
     <h1>Customers:</h1>
     <ul>
         <li>
@@ -32,6 +34,8 @@ require_once __DIR__ . '/class/Property/Property.php';
             ?>
         </li>
     </ul>
+
+    <!-- EstateAgents -->
     <h1>EstateAgents:</h1>
     <ul>
         <li>
@@ -40,13 +44,24 @@ require_once __DIR__ . '/class/Property/Property.php';
         <li>
             <?php
             $employee_1->setDiscount(60);
-            echo 'Sconto employee_1: ' . $employee_1->getDiscount() . ' %.'; ?>
+            echo 'Sconto ' . $employee_1->name . ' ' . $employee_1->lastname . ': '. $employee_1->getDiscount() . ' %.'; ?>
         </li>
         <li>
             <?php
             $employee_1->setAddress('Bellagio', 22021, 'Como');
             echo $employee_1->getAddress();
             ?>
+        </li>
+    </ul>
+
+    <!-- Properties -->
+    <h1>Properties:</h1>
+    <ul>
+        <li>
+            <?php echo $property_1->name ?>
+        </li>
+        <li>
+            <?php echo 'Nome immobile: ' . $property_2_rent->name . ' --- Affitto mensile: ' . $property_2_rent->getRentalPrice() ?>
         </li>
     </ul>
 

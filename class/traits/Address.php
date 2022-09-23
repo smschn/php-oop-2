@@ -1,8 +1,9 @@
 <?php
 
 trait Address {
-    protected $street;
-    protected $house_number;
+
+    public $street;
+    public $house_number;
     protected $city;
     protected $cap;
     protected $province;
@@ -16,4 +17,5 @@ trait Address {
     public function getAddress() {
         return 'Residenza: ' . $this->city . ' --- CAP: ' . $this->cap . ' --- Provincia: ' . $this->province;
     }
+    
 }

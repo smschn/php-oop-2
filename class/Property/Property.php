@@ -3,10 +3,16 @@
 require_once __DIR__ . '/../traits/Address.php';
 
 class Property {
+
     public $name;
 
     use Address;
+
+    public function __construct($nameP) {
+        $this->name = $nameP;
+    }
+
 }
 
-$test3 = new Property();
-var_dump($test3);
+$property_1 = new Property('Villa Balbianello');
+var_dump($property_1);
