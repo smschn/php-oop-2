@@ -1,11 +1,9 @@
 <?php
 
-require_once __DIR__ . '/class/User/User.php';
-require_once __DIR__ . '/class/User/Customer.php';
-require_once __DIR__ . '/class/User/EstateAgent.php';
-require_once __DIR__ . '/class/Property/Property.php';
-require_once __DIR__ . '/class/Property/PropertyForRent.php';
-require_once __DIR__ . '/class/Property/PropertyForSale.php';
+require_once __DIR__ . '/classes/User/Customer.php';
+require_once __DIR__ . '/classes/User/EstateAgent.php';
+require_once __DIR__ . '/classes/Property/PropertyForRent.php';
+require_once __DIR__ . '/classes/Property/PropertyForSale.php';
 
 ?>
 
@@ -79,7 +77,7 @@ require_once __DIR__ . '/class/Property/PropertyForSale.php';
     <ol>
         <li>
             <?php
-                echo 'Nome immobile: ' . $property_1_rent->name . ' <br> Affitto mensile: ' . $property_1_rent->getRentalPrice();
+                echo 'Nome immobile: ' . $property_1_rent->name . ' <br> Tipologia immobile: ' . $property_1_rent->property_type . '<br> Affitto mensile: ' . $property_1_rent->getRentalPrice();
             ?>
         </li>
         <br>

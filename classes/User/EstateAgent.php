@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/User.php';
+
 class EstateAgent extends User {
 
     protected $employee_id; // PROTECTED = accessibili all'interno di questa classe e all'interno di classi figlie. Non accessibili dagli oggetti (se non tramite set() e get()).
